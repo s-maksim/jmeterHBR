@@ -10,3 +10,5 @@ mv foo1 Merged_Results.jtl
 gzip -9 Merged_Results.jtl
 curl -v https://loadosophia.org/api/file/upload/ -F "token=`cat loadosophia_token.txt`" -F "projectKey=HBR_Perftest" -F "jtl_file=@Merged_Results.jtl.gz"
 rm foo2
+rm Loadosophia_*
+rm Merged_Results.jtl.gz
