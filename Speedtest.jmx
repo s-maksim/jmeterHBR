@@ -3180,7 +3180,7 @@ catch (Throwable ex) {
         <stringProp name="storeDir"></stringProp>
         <stringProp name="color">none</stringProp>
         <stringProp name="title"></stringProp>
-        <boolProp name="useOnline">false</boolProp>
+        <boolProp name="useOnline">true</boolProp>
       </kg.apc.jmeter.reporters.LoadosophiaUploader>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV ZIP codes CA" enabled="true">
