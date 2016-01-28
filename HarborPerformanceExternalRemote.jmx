@@ -23,6 +23,11 @@
             <stringProp name="Argument.value">${__P(general.path,/PublicPortal/statefundnew)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">${__P(general.protocol,http)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
           <elementProp name="perfmonFile" elementType="Argument">
             <stringProp name="Argument.name">perfmonFile</stringProp>
             <stringProp name="Argument.value">perfmon_${__time()}</stringProp>
@@ -84,7 +89,7 @@
         <stringProp name="HTTPSampler.port"></stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
         <stringProp name="HTTPSampler.contentEncoding"></stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
         <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
@@ -2290,7 +2295,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
               <stringProp name="HTTPSampler.path">${path}/Report/GenerateRosterOfAllTreatingPhysicians</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -2393,7 +2398,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                 <stringProp name="HTTPSampler.port"></stringProp>
                 <stringProp name="HTTPSampler.connect_timeout"></stringProp>
                 <stringProp name="HTTPSampler.response_timeout"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
                 <stringProp name="HTTPSampler.path">${path}/Report/ValidateZipAddress</stringProp>
                 <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -2492,7 +2497,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                 <stringProp name="HTTPSampler.port"></stringProp>
                 <stringProp name="HTTPSampler.connect_timeout"></stringProp>
                 <stringProp name="HTTPSampler.response_timeout"></stringProp>
-                <stringProp name="HTTPSampler.protocol">http</stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
                 <stringProp name="HTTPSampler.contentEncoding"></stringProp>
                 <stringProp name="HTTPSampler.path">${path}/Report/GenerateRegionalAreaListingReport</stringProp>
                 <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -2568,7 +2573,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
               <stringProp name="HTTPSampler.path">${path}/Report/GenerateCompleteProviderDirectory</stringProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -2730,7 +2735,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
               <stringProp name="HTTPSampler.path">${path}/AdvancedSearch/Search</stringProp>
               <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -2778,22 +2783,6 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   </elementProp>
                 </collectionProp>
               </HeaderManager>
-              <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="1389000409">No results found</stringProp>
-                </collectionProp>
-                <stringProp name="TestPlan.comments">asdf</stringProp>
-                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">6</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-              <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="false">
-                <stringProp name="Assertion.test_field">SizeAssertion.response_data</stringProp>
-                <stringProp name="SizeAssertion.size">400</stringProp>
-                <intProp name="SizeAssertion.operator">3</intProp>
-              </SizeAssertion>
               <hashTree/>
             </hashTree>
           </hashTree>
@@ -2908,7 +2897,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
               <stringProp name="HTTPSampler.path">${path}/AdvancedSearch/Search</stringProp>
               <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -2956,22 +2945,6 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   </elementProp>
                 </collectionProp>
               </HeaderManager>
-              <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="1389000409">No results found</stringProp>
-                </collectionProp>
-                <stringProp name="TestPlan.comments">asdf</stringProp>
-                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">6</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-              <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="false">
-                <stringProp name="Assertion.test_field">SizeAssertion.response_data</stringProp>
-                <stringProp name="SizeAssertion.size">400</stringProp>
-                <intProp name="SizeAssertion.operator">3</intProp>
-              </SizeAssertion>
               <hashTree/>
             </hashTree>
           </hashTree>
@@ -3045,7 +3018,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
               <stringProp name="HTTPSampler.path">${path}/${OrganizationType}/Search</stringProp>
               <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3105,12 +3078,6 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <hashTree/>
             </hashTree>
           </hashTree>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
-            <boolProp name="displayJMeterProperties">false</boolProp>
-            <boolProp name="displayJMeterVariables">true</boolProp>
-            <boolProp name="displaySystemProperties">false</boolProp>
-          </DebugSampler>
-          <hashTree/>
           <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller Search using map 50" enabled="true">
             <intProp name="ThroughputController.style">1</intProp>
             <boolProp name="ThroughputController.perThread">false</boolProp>
@@ -3122,12 +3089,6 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
             </FloatProperty>
           </ThroughputController>
           <hashTree>
-            <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
-              <boolProp name="displayJMeterProperties">false</boolProp>
-              <boolProp name="displayJMeterVariables">true</boolProp>
-              <boolProp name="displaySystemProperties">false</boolProp>
-            </DebugSampler>
-            <hashTree/>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search using map" enabled="true">
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                 <collectionProp name="Arguments.arguments">
@@ -3172,7 +3133,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
               <stringProp name="HTTPSampler.port"></stringProp>
               <stringProp name="HTTPSampler.connect_timeout"></stringProp>
               <stringProp name="HTTPSampler.response_timeout"></stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
               <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
               <stringProp name="HTTPSampler.path">${path}/${OrganizationType}/Search</stringProp>
               <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3298,7 +3259,7 @@ catch (Throwable ex) {
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
             <stringProp name="HTTPSampler.path">${path}/${OrganizationType}/Search</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3346,22 +3307,6 @@ catch (Throwable ex) {
                 </elementProp>
               </collectionProp>
             </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1389000409">No results found</stringProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">asdf</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">6</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="false">
-              <stringProp name="Assertion.test_field">SizeAssertion.response_data</stringProp>
-              <stringProp name="SizeAssertion.size">400</stringProp>
-              <intProp name="SizeAssertion.operator">3</intProp>
-            </SizeAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -3451,7 +3396,7 @@ catch (Throwable ex) {
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
             <stringProp name="HTTPSampler.path">${path}/ProviderSearch/Search</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -3499,22 +3444,6 @@ catch (Throwable ex) {
                 </elementProp>
               </collectionProp>
             </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1389000409">No results found</stringProp>
-              </collectionProp>
-              <stringProp name="TestPlan.comments">asdf</stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">6</intProp>
-            </ResponseAssertion>
-            <hashTree/>
-            <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="false">
-              <stringProp name="Assertion.test_field">SizeAssertion.response_data</stringProp>
-              <stringProp name="SizeAssertion.size">400</stringProp>
-              <intProp name="SizeAssertion.operator">3</intProp>
-            </SizeAssertion>
             <hashTree/>
           </hashTree>
         </hashTree>
