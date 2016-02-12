@@ -55,7 +55,7 @@
           </elementProp>
           <elementProp name="percentAdvSearch" elementType="Argument">
             <stringProp name="Argument.name">percentAdvSearch</stringProp>
-            <stringProp name="Argument.value">${__P(test.percentAdvSearch,15)}</stringProp>
+            <stringProp name="Argument.value">${__P(test.percentAdvSearch,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="percentMapSearch" elementType="Argument">
@@ -71,6 +71,11 @@
           <elementProp name="percentSearchZipWithFilters" elementType="Argument">
             <stringProp name="Argument.name">percentSearchZipWithFilters</stringProp>
             <stringProp name="Argument.value">${__P(test.percentSearchZipWithFilters,20)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="percentGetHomePage" elementType="Argument">
+            <stringProp name="Argument.name">percentGetHomePage</stringProp>
+            <stringProp name="Argument.value">${__P(test.percentGetHomePage,5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="DEBUG" elementType="Argument">
@@ -2203,7 +2208,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
           <boolProp name="BeanShellAssertion.resetInterpreter">false</boolProp>
         </BeanShellAssertion>
         <hashTree/>
-        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller Get Home Page" enabled="true">
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller Get Home Page Once For Each User" enabled="true">
           <intProp name="ThroughputController.style">0</intProp>
           <boolProp name="ThroughputController.perThread">true</boolProp>
           <intProp name="ThroughputController.maxThroughput">1</intProp>
@@ -2212,6 +2217,34 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
             <value>50.0</value>
             <savedValue>0.0</savedValue>
           </FloatProperty>
+        </ThroughputController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Home Page" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">${path}#$ProviderSearch</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <ThroughputController guiclass="ThroughputControllerGui" testclass="ThroughputController" testname="Throughput Controller Get Home Page 5 " enabled="true">
+          <intProp name="ThroughputController.style">1</intProp>
+          <boolProp name="ThroughputController.perThread">false</boolProp>
+          <intProp name="ThroughputController.maxThroughput">1</intProp>
+          <stringProp name="ThroughputController.percentThroughput">${percentGetHomePage}</stringProp>
         </ThroughputController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Home Page" enabled="true">
