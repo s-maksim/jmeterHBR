@@ -2734,7 +2734,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   <elementProp name="SortType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">SortType</stringProp>
-                    <stringProp name="Argument.value">3</stringProp>
+                    <stringProp name="Argument.value">0</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -2896,7 +2896,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   <elementProp name="SortType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">SortType</stringProp>
-                    <stringProp name="Argument.value">3</stringProp>
+                    <stringProp name="Argument.value">0</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -3017,7 +3017,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   <elementProp name="SortType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">SortType</stringProp>
-                    <stringProp name="Argument.value">Distance</stringProp>
+                    <stringProp name="Argument.value">0</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -3132,7 +3132,7 @@ vars.put(&quot;longitude&quot;,(longitude+Math.random()).toString());
                   <elementProp name="SortType" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.name">SortType</stringProp>
-                    <stringProp name="Argument.value">Distance</stringProp>
+                    <stringProp name="Argument.value">0</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                     <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   </elementProp>
@@ -3258,7 +3258,7 @@ catch (Throwable ex) {
                 <elementProp name="SortType" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">SortType</stringProp>
-                  <stringProp name="Argument.value">Distance</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -3367,7 +3367,7 @@ catch (Throwable ex) {
                 <elementProp name="SortType" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">SortType</stringProp>
-                  <stringProp name="Argument.value">Distance</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
