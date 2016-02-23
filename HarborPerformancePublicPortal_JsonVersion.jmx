@@ -3337,6 +3337,8 @@ catch (Throwable ex) {
         <boolProp name="useOnline">false</boolProp>
       </kg.apc.jmeter.reporters.LoadosophiaUploader>
       <hashTree/>
+      <kg.apc.jmeter.reporters.ConsoleStatusLogger guiclass="kg.apc.jmeter.reporters.ConsoleStatusLoggerGui" testclass="kg.apc.jmeter.reporters.ConsoleStatusLogger" testname="jp@gc - Console Status Logger" enabled="true"/>
+      <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV ZIP codes CA" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
