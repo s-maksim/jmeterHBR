@@ -35,7 +35,7 @@
           </elementProp>
           <elementProp name="ZipcodeConstant" elementType="Argument">
             <stringProp name="Argument.name">ZipcodeConstant</stringProp>
-            <stringProp name="Argument.value">90010</stringProp>
+            <stringProp name="Argument.value">90011</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="numberOfUsers" elementType="Argument">
